@@ -1,0 +1,35 @@
+/* видима частина вікна браузера */
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* основний контейнер */
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+/* оболонка-посилання для однієї зірки */
+a {
+  display: block;
+}
+
+/* зображення однієї зірки */
+svg {
+  stroke: gray;
+  stroke-width: 10px;
+}
+
+/* поведінка/дизайн зірок при наведенні лише на першу зірку та попередніх при наведенні на кожну наступну */
+a[class^="star-"]:hover svg,
+a[class^="star-"]:hover ~ a svg {
+  fill: #ffd200;
+  stroke-width: 0;
+}
